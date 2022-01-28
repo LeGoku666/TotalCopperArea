@@ -6,3 +6,5 @@ In Cadsoft EAGLE you leave only the layers whose area you want to calculate turn
 Open the finished bitmap in the program and press START.
 
 The program can calculate a pair of images in parallel asynchronously without blocking the GUI.
+
+Allowed image DPI: 1016, 508, 300, 254, 127
