@@ -5,4 +5,4 @@ A simple little project. The program counts the white pixels and calculates the 
 In Cadsoft EAGLE you leave only the layers whose area you want to calculate turned on, they must be white, the background black. You export the monochrome bitmap in eagle. 
 Open the finished bitmap in the program and press START.
 
-Program potrafi obliczać parę obrazków równolegle asynchronicznie nie blokując GUI.
+The program can calculate a pair of images in parallel asynchronously without blocking the GUI.
