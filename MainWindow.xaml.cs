@@ -64,27 +64,39 @@ namespace TotalCopperArea
                         {
                             newImage.dpi = dpi_1016;
                             newImage.iDPI = image.HorizontalResolution;
-                        } 
-                        if (image.HorizontalResolution == 508)
+                        }
+                        else if (image.HorizontalResolution == 508)
                         {
                             newImage.dpi = dpi_508;
                             newImage.iDPI = image.HorizontalResolution;
                         }
-                        if (image.HorizontalResolution == 300)
+                        else if (image.HorizontalResolution == 300)
                         {
                             newImage.dpi = dpi_300;
                             newImage.iDPI = image.HorizontalResolution;
                         }
-                        if (image.HorizontalResolution == 254)
+                        else if (image.HorizontalResolution == 254)
                         {
                             newImage.dpi = dpi_254;
                             newImage.iDPI = image.HorizontalResolution;
                         }
-                        if (image.HorizontalResolution == 127)
+                        else if (image.HorizontalResolution == 127)
                         {
                             newImage.dpi = dpi_127;
                             newImage.iDPI = image.HorizontalResolution;
-                        }  
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong image DPI resolition!\n" +
+                                newImage.name);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Image horizontal vertical DPI not match!\n" +
+                                      newImage.name);
+                        return;
                     }
 
                     newImage.totalPixels = (ulong)image.Height * (ulong)image.Width;
@@ -176,7 +188,7 @@ namespace TotalCopperArea
                     image.pixelsCounted = 0;
                     break;
                 }
-               
+
                 progress.Report(image);
             }
         }
